@@ -1,0 +1,24 @@
+.form {
+    text-align: right;
+    text-align: right;
+    margin-top: 18px;
+  }
+  
+  .bt2 {
+    font-size: 17px;
+    background-color: #8a2b06;
+    border: 1px solid #8a2b06;
+    color: white;
+    /* padding: 0.25rem 2rem; */
+    border-radius: 20px;
+    font-weight: bold;
+    width: 78px;
+    height: 28px;
+
+  }
+  
+  .bt2:hover,
+  .bt2:active {
+    background-color: #641e03;
+    border-color: #641e03;
+  }

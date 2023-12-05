@@ -1,0 +1,66 @@
+.cont label{
+    color: rgb(19, 15, 15);
+    margin-right: 15px;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+div{
+    margin-bottom: 12px;
+}
+.cont input{
+    height: 25px;
+    width: 315px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 2px;
+    color: rgb(35, 41, 59);
+    font-size: 20px;
+    text-transform: capitalize;
+    background-color: white;
+}
+.err1 p{
+    color: red;
+    font-size: 18px;
+    margin: 0px;
+}
+.err1 input{
+    height: 25px;
+    width: 315px;
+    background-color: rgb(247, 221, 229);
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 2px;
+    color: rgb(35, 41, 59);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.err1 label{
+    color: rgb(19, 15, 15);
+    margin-right: 15px;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+.but1{
+    border: 1px solid #a5a1a1;
+    font-size: 20px;
+    color: azure;
+    background: #462020;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+.but2{
+    border: 1px solid #a5a1a1;
+    font-size: 20px;
+    color: azure;
+    background: #eb8b8b;
+    border-radius: 5px;
+}
+.but2:hover{
+    background: red;
+}

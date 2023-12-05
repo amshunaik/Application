@@ -1,0 +1,29 @@
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input label {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  
+  .input input {
+    width: 3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font: inherit;
+    padding-left: 0.5rem;
+  }
+  .bt1{
+    border-radius: 5px;
+    color: aliceblue;
+    height: 25px;
+    margin-right: 10px;
+    background-color: #007a96;
+    font-size: 14px;
+  }
+  .bt1:hover{
+    background-color: #88999e;
+  }
