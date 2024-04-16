@@ -1,5 +1,7 @@
 # Enhanced food application
 The purpose of the application is to provide consumers with a more enriched and individualized gastronomic experience. The application has three important features: Cart Management, Order History, and Dynamic Filters.
+![Screenshot 2023-12-02 143611](https://github.com/amshunaik/Enhanced_food_application/assets/103670494/82f005df-6ec3-4320-92ba-94d3d735c16f)
+
 
 ## Steps to be followed:
 - Open a new folder in vs-code or any other 
