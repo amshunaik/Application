@@ -1,0 +1,56 @@
+.hk{
+    margin-left: 38px;
+}
+.ord{
+    margin-top: 120px;
+    text-align: center;
+}
+.ordlist{
+    display: flex;
+    
+    flex-direction: column;
+}
+.l1{
+    display: flex;
+}
+.l1 li{
+    text-align: center;
+    /* padding: 0px 43px; */
+    width: 221px;
+    list-style: none;
+    border: 1px solid #26261c;
+}
+.list{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+.ord2{
+    margin-left: 303px;
+}
+.list li{
+    font-weight: 500;
+    text-align: center;
+    list-style: none;
+    border: 1px solid black;
+    width: 221px;
+    font-size: 20px;
+}
+.l2 li{
+    border: none;
+    display: flex;
+
+}
+.l2 span{
+    display: inline-block;
+    width: 110px;
+}
+.lk1{
+    flex: 4;
+    padding-left: 3px;
+}
+.lk2{
+    flex: 6;
+    color: blue;
+}

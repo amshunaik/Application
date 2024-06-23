@@ -1,0 +1,97 @@
+.meals {
+    max-width: 60rem;
+    width: 90%;
+    margin: 2rem auto;
+    animation: meals-appear 1s ease-out forwards;
+  }
+  
+  .meals ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @keyframes meals-appear {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.loading{
+  color: red;
+  text-align: center;
+  font-size: 30px;
+}
+.err{
+  color: blueviolet;
+  font-size: 22px;
+}
+.search input {
+  font-size: 21px;
+    width: 639px;
+    height: 30px;
+    color: darkgrey;
+    border: 2px solid #8d6659;
+    border-radius: 9px;
+    text-indent: 9px;
+    text-transform: capitalize;
+
+}
+.search{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.butstack{
+  margin-top: 9px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.butstack button.active{
+  background: #517da8;
+  color: white;
+}
+.butstack button{
+  font-size: 20px;
+  border: 1px solid black;
+  background: aliceblue;
+  border-radius: 7px;
+}
+.butstack button:hover{
+  background-color: #bcd0ef;
+
+}
+.amount{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 29px;
+}
+.amount input{
+  width: 49px;
+    height: 25px;
+    margin-left: 5px;
+    font-size: 15px;
+    padding: 0px;
+    color: teal;
+    border: 1px solid teal;
+}
+.amount button.active{
+  background: #8d6659;
+}
+.amount button{
+  font-size: 14px;
+  height: 23px;
+  margin-top: 2px;
+  background: #e5f0fa;
+  border: 1px solid black;
+}

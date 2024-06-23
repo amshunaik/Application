@@ -1,0 +1,39 @@
+.addprod{
+    margin-left: 20px;
+
+}
+.addprod input{
+    padding: 9px;
+    display: block;
+    margin-bottom: 15px;
+    width: 350px;
+    font-size: 21px;
+    border: 2px solid #cdc4b2;
+    margin-left: 30px;
+}
+.addprod span{
+    color: red;
+    margin-left: 36px;
+    display: block;
+    margin-bottom: 20px;
+}
+.addprod button{
+    padding: 6px;
+    font-size: 20px;
+    background-color: #e6f2d2;
+}
+.prod ul{
+    text-align: center;
+    margin: 0px;
+}
+.prod ul li{
+    border: 1.5px solid #dacbae;
+    display: inline-block;
+    /* margin-left: 84px; */
+    padding: 6px;
+    /* padding-left: 70px; */
+    width: 105px;
+}
+.prod h1{
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+.link2{
+    
+    display: flex;
+    gap: 42px;
+    list-style: none;
+    background: #f8ead0;
+    margin: 0px;
+    padding: 17px 25px;
+}
+.link2 a{
+    text-decoration: none;
+    color: #6b94d3;
+    font-size: 20px;
+}
+.link2 a:hover{
+    color: red;
+}
+h5{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: wheat;
+    margin: 0px;
+    font-size: 21px;
+}
+.box0{
+    margin-left: 50px;
+    margin-top: 120px;
+   
+}
+.box0 input{
+    display: block;
+    text-indent: 2px;
+    border: 2px solid #d0c5af;
+    font-size: 20px;
+    padding: 6px;
+    margin-bottom: 29px;
+    width: 303px;
+    margin-left: 20px;
+}
+.box0 button{
+    font-size: 20px;
+    color: #642323;
+    background: #eac192;
+}
