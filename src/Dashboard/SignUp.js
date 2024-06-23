@@ -19,7 +19,7 @@ const SignUp=()=>{
       })
 const collect=async()=>{
     console.log(name,pw,email);
-    if(name==''||pw==''||pw.length()<6||email==''){
+    if(name==''||pw==''||email==''){
         seterr("Fill complete details");
         return;
 
