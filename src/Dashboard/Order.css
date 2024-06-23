@@ -2,7 +2,8 @@
     margin-left: 38px;
 }
 .ord{
-    margin-top: 120px;
+    padding-top: 120px;
+    /*height:100vw ;*/
     text-align: center;
 }
 .ordlist{
@@ -12,30 +13,60 @@
 }
 .l1{
     display: flex;
+    
 }
-.l1 li{
+.jk1{
     text-align: center;
-    /* padding: 0px 43px; */
+    padding: 0px 10px; 
     width: 221px;
     list-style: none;
     border: 1px solid #26261c;
+    color: indianred;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
 }
 .list{
+    position: absolute;
     display: flex;
     text-align: center;
     justify-content: center;
+    padding-left: 300px;
     
 }
 .ord2{
-    margin-left: 303px;
+    margin-left: 260px;
+    position: relative;
+    margin-top: 73px;
+    padding-bottom: 68px;
 }
 .list li{
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
+    padding: 4px 0px;
     list-style: none;
     border: 1px solid black;
-    width: 221px;
+    width: 241px;
     font-size: 20px;
+    background: burlywood;
+}
+.l2{
+    list-style: none;
+    width: 241px;
+    color: cadetblue;
+    font-size: 19px;
+    font-weight: 500;
+    
+
+
+}
+.pt1{
+    
+    border-bottom: 1px solid black;
 }
 .l2 li{
     border: none;
@@ -52,5 +83,11 @@
 }
 .lk2{
     flex: 6;
-    color: blue;
+    color: #997121;
+}
+.part0{
+    display: flex;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
 }

@@ -10,12 +10,16 @@
 .link2 a{
     text-decoration: none;
     color: #6b94d3;
-    font-size: 20px;
+   
+    font-size: 21px;
+    font-weight: 700;
 }
 .link2 a:hover{
+    
+    font-size: 21px;
     color: red;
 }
-h5{
+/* h5{
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -23,10 +27,15 @@ h5{
     background-color: wheat;
     margin: 0px;
     font-size: 21px;
-}
+} */
 .box0{
-    margin-left: 50px;
+    margin-left: 105px;
     margin-top: 120px;
+    margin-top: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
    
 }
 .box0 input{
@@ -35,12 +44,34 @@ h5{
     border: 2px solid #d0c5af;
     font-size: 20px;
     padding: 6px;
-    margin-bottom: 29px;
     width: 303px;
     margin-left: 20px;
 }
 .box0 button{
     font-size: 20px;
-    color: #642323;
-    background: #eac192;
+    width: 100px;
+    font-size: 20px;
+    border-radius: 14px;
+    padding: 5px 9px;
+    color: white;
+    background: #564d43;
+    margin-top: 20px;
+}
+.error1{
+    color: #5675ca;
+    margin: 0px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.detr{
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 20px;
+    color: brown;
+}
+.log11{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }

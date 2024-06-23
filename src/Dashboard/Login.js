@@ -8,13 +8,20 @@ const Login = () => {
     const [pw,setpw]=useState('');
 
      const [email,setemail]=useState('');
-     useEffect(()=>{
-      const auth=localStorage.getItem('user')
-      if(auth){
-         navigate("/")
-      }
-     })
+     const [err,seterr]=useState('');
+     
+     const auth=localStorage.getItem('login')
+   //   useEffect(()=>{
+   //    if(auth){
+   //       navigate("/")
+   //    }
+   //   })
      const handleLogin=async()=>{
+         if(email==''|| pw==''){
+            seterr("Fill all the entries");
+            return;
+
+         }
          console.log("signed in")
          console.log(email,pw)
          let result=await fetch("http://localhost:4000/login",{
@@ -26,14 +33,16 @@ const Login = () => {
 
          });
          result=await result.json();
+         console.log("login : ",result);
          if(result){
-            localStorage.setItem("user",JSON.stringify(result))
+            localStorage.setItem("login",JSON.stringify(result))
 
          }
          else{
             alert("please enter correct details")
          }
          console.log("hbj")
+         //localStorage.setItem("login",auth)
          navigate("/")
          
      }
@@ -42,9 +51,22 @@ const Login = () => {
         
         <div className='box0'>
              <h1>Login here </h1>
-             <input type="text" placeholder='Enter email' value={email} onChange={(e)=>setemail(e.target.value)} />
-             <input type="password" placeholder='Enter Password' value={pw} onChange={(e)=>setpw(e.target.value)} />
-             <button onClick={handleLogin} type='button'>Sign In </button>
+ 
+           <div className='log11'>
+           <div>
+           <label htmlFor="" className='detr'>Email ID : </label>
+             <input type="text" placeholder='Enter email' value={email} onChange={(e)=>setemail(e.target.value)} required/>
+             {email==''&&err&&<h4 className='error1'>Enter valid email id * </h4>}
+           </div>
+             
+           <div>
+           <label htmlFor="" className='detr'>Enter password : </label>
+             <input type="password" placeholder='Enter Password' value={pw} onChange={(e)=>setpw(e.target.value)} required/>
+             {pw==''&&err&&<h4 className='error1'>Enter correct password * </h4>}
+           </div>
+           </div>
+
+             <button onClick={handleLogin} type='button'>Login </button>
          </div>
       
   )

@@ -2,6 +2,7 @@
 import { useEffect,useState } from 'react';
 import './Order.css'
 import Joke2 from './Joke2';
+import Footer from './Footer';
 const OrderHis = () => {
     const [ord,setord]=useState([]);
     const [err,seterr]=useState('');
@@ -26,33 +27,11 @@ const OrderHis = () => {
         }
     },[] );
 
-        //   const loadmeal=[];
-        //   for(const k in resdata){
-        //     loadmeal.push({
-        //       id:k,
-        //       name:resdata[k].name,
-        //       description:resdata[k].description,
-        //       price:resdata[k].price
-        //     })
-        //   }
-        //   setmeals(loadmeal);
-        //   setload(false);
-  
-  
-        // }
-        // try{
-        //   fetchmeal();
-        // }
-        // catch(error){
-        //   isload(false);
-        //   seterr(error.message)
-        // }
-    //const d1=ord.map((e1)=>e1.map((e2) =><Joke2 am={e2.amount}></Joke2>))
-    //const d1=ord.map((e1)=><Joke2 am={e1}></Joke2>)
-
   return (
+
     <div className='ord'>
         <h1 className='hk'>Order History</h1>
+        
         <ul className='list'>
             <li>Name</li>
             <li>Address</li>
@@ -63,23 +42,27 @@ const OrderHis = () => {
         <ul className='ordlist'>
         {Object.keys(ord).map((orderKey) => (
           <li className='l1'key={orderKey}>
-            <li>{ord[orderKey].user.name}</li>
-            <li>{ord[orderKey].user.street}</li>
-            <li> {ord[orderKey].user.phone}</li>
-           
-              {Object.keys(ord[orderKey].orderedItems).map((itemKey) => (
-                <><li className='l2'key={itemKey}>
+            <li className='jk1'>{ord[orderKey].user.name}</li>
+            <li className='jk1'>{ord[orderKey].user.street}</li>
+            <li className='jk1'> {ord[orderKey].user.phone}</li>
+            <li className='part0'>
+            {Object.keys(ord[orderKey].orderedItems).map((itemKey) => (
+                <div className='pt1'><li className='l2'key={itemKey}>
                 <li><li className='lk1'>Amount :</li><li className='lk2'> {ord[orderKey].orderedItems[itemKey].amount}</li></li>
                 <li><li className='lk1'>Name : </li> <li className='lk2'> {ord[orderKey].orderedItems[itemKey].name}</li> </li>
                 <li><li className='lk1'>Price :</li> <li className='lk2' >₹ {ord[orderKey].orderedItems[itemKey].price}</li></li>
                 </li>
-                </>
+                </div>
               ))}
+
+            </li>
+              
           </li>
         ))}
       </ul>
 
         </div>
+        <Footer/>
         
       
       

@@ -1,9 +1,15 @@
 import React from 'react'
-import { Navigate,Outlet } from 'react-router-dom'
-const PrivateComp=()=>{
-    const auth=localStorage.getItem('user');
+import { Outlet } from 'react-router-dom'
+import Header from '../component/Layout/Header'
 
-    return auth?<Outlet/>:<Navigate to="/signup"/>
-
+const PrivateComp = () => {
+  return (
+    <div>
+        <Outlet/>
+        
+      
+    </div>
+  )
 }
-export default PrivateComp;
+
+export default PrivateComp

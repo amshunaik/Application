@@ -11,34 +11,42 @@ const Header=(props)=>{
     //const [presslogout,setpresslogout]=useState(false);
     //const[data1,setdata1]=useState(localStorage.getItem('user'))
     const auth=localStorage.getItem('user');
+    const auth1=localStorage.getItem('login');
+    //console.log("Auth : ",auth)
     const onlogout=()=>{
       console.log("apple");
       localStorage.clear();
       //setdata1(null)
       //setpresslogout(true)
       console.log(auth)
-      navigate('/signup')
+      navigate('/login')
       
     }
     
     return (
         <Fragment>
             <header className={classes.header}>
-                <h1>FOODIE</h1>
-                {auth?<ul className={classes.lok}>
+                <div className={classes.icon1}>
+                <img className={classes.food1}src="food.png" alt="" />
+                <h1 className={classes.head5}>FooDee</h1>
+                </div>
+                
+                {auth1&&<ul className={classes.lok}>
                     <li><NavLink to="/" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Home</NavLink></li>
                     <li><NavLink to="/hist" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Order History</NavLink></li>
-                    <li><NavLink to="/signup" onClick={onlogout} className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Logout <span className={classes.sp1}>{JSON.parse(auth).name}</span> </NavLink></li>
+                    <li><NavLink to="/signup" onClick={onlogout} className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Logout </NavLink></li>
+                    <li><h2 className={classes.hill}> Welcome <span className={classes.sp1}>{JSON.parse(auth1).name.charAt(0)}</span></h2></li>
                     
                   
-                  </ul>:<ul className={classes.lok}>
+                  </ul>
+                }<ul className={classes.lok1}>
                     
-                    <li><NavLink  to ="/signup" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Sign up</NavLink></li>
-                    <li><NavLink to="/login" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Login</NavLink></li>
+                  {auth1==null&&<><li><NavLink to="/login" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Login</NavLink></li>
+                    <li><NavLink  to ="/signup" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Signup</NavLink></li></>}
                   </ul> 
-                  }
+                  
                 
-                <HeaderCart onShow={props.onClk}/>
+                  {auth1&&<HeaderCart onShow={props.onClk}/>}
             </header>
 
             
