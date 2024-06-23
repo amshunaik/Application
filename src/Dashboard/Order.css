@@ -2,12 +2,8 @@
     margin-left: 38px;
 }
 .ord{
-<<<<<<< HEAD
     padding-top: 120px;
     /*height:100vw ;*/
-=======
-    margin-top: 120px;
->>>>>>> 43b2327c5f3dd71f51bc253dbef921834b1989d6
     text-align: center;
 }
 .ordlist{
@@ -17,7 +13,6 @@
 }
 .l1{
     display: flex;
-<<<<<<< HEAD
     
 }
 .jk1{
@@ -72,32 +67,6 @@
 .pt1{
     
     border-bottom: 1px solid black;
-=======
-}
-.l1 li{
-    text-align: center;
-    /* padding: 0px 43px; */
-    width: 221px;
-    list-style: none;
-    border: 1px solid #26261c;
-}
-.list{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    
-}
-.ord2{
-    margin-left: 303px;
-}
-.list li{
-    font-weight: 500;
-    text-align: center;
-    list-style: none;
-    border: 1px solid black;
-    width: 221px;
-    font-size: 20px;
->>>>>>> 43b2327c5f3dd71f51bc253dbef921834b1989d6
 }
 .l2 li{
     border: none;
@@ -114,7 +83,6 @@
 }
 .lk2{
     flex: 6;
-<<<<<<< HEAD
     color: #997121;
 }
 .part0{
@@ -123,7 +91,3 @@
     display: flex;
     flex-direction: column;
 }
-=======
-    color: blue;
-}
->>>>>>> 43b2327c5f3dd71f51bc253dbef921834b1989d6
