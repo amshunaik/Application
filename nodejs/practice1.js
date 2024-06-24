@@ -3,6 +3,7 @@ const cors = require('cors');
 const connectDB = require('./db/config'); // Import the connection module
 const User = require('./db/User');
 const Product = require('./db/Product');
+//require('../node_modules/mongoose/lib/helpers/projection/isNestedProjection')
 const isNestedProjection = require('../projection/isNestedProjection');
 
 const app = express();
