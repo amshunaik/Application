@@ -18,7 +18,7 @@ const Header=(props)=>{
     const loginauht1=JSON.parse(auth1);
     
     
-    console.log(loginauht1)
+    console.log(loginauht1.status)
     
     //const status=loginauht1.status;
     const onlogout=()=>{
@@ -41,9 +41,9 @@ const Header=(props)=>{
                 
                 {auth1&&<ul className={classes.lok}>
                     <li><NavLink to="/" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Home</NavLink></li>
-                    {auth1.status=="server"&&<li><NavLink to="/hist" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Order History</NavLink></li>}
+                    {loginauht1.status=="server"&&<li><NavLink to="/hist" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Order History</NavLink></li>}
                     <li><NavLink to="/signup" onClick={onlogout} className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Logout </NavLink></li>
-                    <li><h2 className={auth1.status === 'cust' ? classes.hill2 : classes.hill}
+                    <li><h2 className={loginauht1.status === 'cust' ? classes.hill2 : classes.hill}
                     > Welcome <span className={classes.sp1}>{JSON.parse(auth1).name.charAt(0)}</span></h2></li>
                     
                   
