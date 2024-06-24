@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './Add.css'
+import {BASE_URL} from './Helper.js'
+
 const AddProd=()=>{
     const [name,setname]=useState("")
     const [price,setprice]=useState("")
@@ -15,7 +17,7 @@ const AddProd=()=>{
     }
     console.log(name,price,category,company)
     const userid=JSON.parse(localStorage.getItem('user'))._id;
-    let result= await fetch("http://localhost:4000/add",{
+    let result= await fetch(`${BASE_URL}/add`,{
         method:'post',
         body:JSON.stringify({userid,name,price,category,company}),
         headers:{

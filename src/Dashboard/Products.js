@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./Add.css"
+import {BASE_URL} from './Helper.js'
 const Products=()=>{
     const [prod,setprod]=useState([]);
     // useEffect(() => {
@@ -16,14 +17,14 @@ const Products=()=>{
         getprod();
     },[]);
     const getprod= async()=>{
-        let result=await fetch('http://localhost:4000/product');
+        let result=await fetch(`${BASE_URL}/product`);
         result=await result.json();
         console.log(setprod)
         setprod(result);
     }
     
     const deleteit=async (id)=>{
-        let result=await fetch(`http://localhost:4000/product/${id}`,{
+        let result=await fetch(`${BASE_URL}/product/${id}`,{
             method:"Delete",
 
         });

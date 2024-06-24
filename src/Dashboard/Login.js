@@ -1,6 +1,7 @@
 
 import React ,{useEffect, useState}from 'react'
 import { useNavigate } from 'react-router-dom';
+import {BASE_URL} from './Helper.js'
 
 const Login = () => {
     const navigate=useNavigate();
@@ -24,7 +25,7 @@ const Login = () => {
          }
          console.log("signed in")
          console.log(email,pw)
-         let result=await fetch("http://localhost:4000/login",{
+         let result=await fetch(`${BASE_URL}/login`,{
             method:'post',
             body:JSON.stringify({email,pw}),
             headers:{

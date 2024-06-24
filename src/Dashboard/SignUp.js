@@ -1,11 +1,13 @@
 import react, { useState,useEffect,useContext } from 'react'
 import {useNavigate} from 'react-router-dom'
 //import Cartcont from '../component/Store/cart-cont';
+import {BASE_URL} from './Helper.js'
 const SignUp=()=>{
     const [name,setname]=useState('');
     const [pw,setpw]=useState('');
     const navigate=useNavigate()
     
+console.log("BASE_URL ; ", BASE_URL)
     //const {presslogout,setpresslogout}=useContext(Cartcont)
     const [email,setemail]=useState('');
     const nav=useNavigate();
@@ -19,12 +21,14 @@ const SignUp=()=>{
       })
 const collect=async()=>{
     console.log(name,pw,email);
+    
+console.log("BASE_URL ; ", BASE_URL)
     if(name==''||pw==''||email==''){
         seterr("Fill complete details");
         return;
 
     }
-    let result=await fetch('http://localhost:4000/register',{
+    let result=await fetch(`${BASE_URL}/register`,{
         method:'post',
         body:JSON.stringify({name,email,pw}),
         headers:{
