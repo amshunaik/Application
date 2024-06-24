@@ -17,7 +17,9 @@ import Cart from './component/Cart/Cart';
 import Cartprovide from './component/Store/cartProvide';
 import Home from './component/Home';
 import OrderHis from './Dashboard/OrderHis';
+import Status from './Dashboard/Status';
 function App() {
+  const [status,setstatus]=useState('');
   // const [cartShown,setcartShown]=useState(false);
 
   // const showcartHandel=()=>{
@@ -26,6 +28,10 @@ function App() {
   // const hideCarthandle=()=>{
   //   setcartShown(false)
   // }
+  const handlestatus=(stat)=>{
+    setstatus(stat);
+
+  }
   return (
     <div className='link0'>
          <BrowserRouter>
@@ -36,11 +42,12 @@ function App() {
              <Route path="/" element={<Home/>}/>   
              <Route path="/p" element={<Products/>}/>
              <Route path="/login" element={<Login/>}/>
+             <Route path="/status" element={<Status onChange={handlestatus} />}/>
              <Route path="/add" element={<AddProd/>}/>
              <Route path="/update" element={<h1>update Product list</h1>}/>
              <Route path="/logout" element={<h1>Logout</h1>}/>
              <Route path="/profile" element={<h1>Profile</h1>}/>
-             <Route path="/hist" element={<OrderHis/>}/>
+             <Route path="/hist" element={<OrderHis onStatus={status}/>}/>
             
              </Route>
              <Route path="/signup" element={<SignUp/>}/>

@@ -34,6 +34,7 @@ const Login = () => {
 
          });
          result=await result.json();
+         result.status='';
          console.log("login : ",result);
          if(result){
             localStorage.setItem("login",JSON.stringify(result))
@@ -44,7 +45,7 @@ const Login = () => {
          }
          console.log("hbj")
          //localStorage.setItem("login",auth)
-         navigate("/")
+         navigate("/status")
          
      }
   return (

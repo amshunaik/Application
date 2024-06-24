@@ -7,7 +7,7 @@ const SignUp=()=>{
     const [pw,setpw]=useState('');
     const navigate=useNavigate()
     
-console.log("BASE_URL ; ", BASE_URL)
+    //console.log("BASE_URL ; ", BASE_URL)
     //const {presslogout,setpresslogout}=useContext(Cartcont)
     const [email,setemail]=useState('');
     const nav=useNavigate();
@@ -23,11 +23,12 @@ const collect=async()=>{
     console.log(name,pw,email);
     
 console.log("BASE_URL ; ", BASE_URL)
-    if(name==''||pw==''||email==''){
-        seterr("Fill complete details");
+    if(name==''||pw==''||email==''||!email.includes("@")){
+        seterr("Fill complete and correct details");
         return;
 
     }
+    
     let result=await fetch(`${BASE_URL}/register`,{
         method:'post',
         body:JSON.stringify({name,email,pw}),

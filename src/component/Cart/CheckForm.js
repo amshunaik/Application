@@ -27,6 +27,8 @@ const CheckForm = (props) => {
         const streetvalid=!isEmpty(Estreet);
         const phonevalid=!isEmpty(Ephone);
         const postvalid=!isEmpty(Epostal);
+        const auth=localStorage.getItem("login");
+        const emai_user=JSON.parse(auth).email
 
         const formvalid=namevalid&&streetvalid&&phonevalid&&postvalid;
         // if(!formvalid){
@@ -34,6 +36,7 @@ const CheckForm = (props) => {
         //     //submit
         // }
         props.onConfirm({
+            email:emai_user,
             name:Ename,
             street:Estreet,
             phone:Ephone,

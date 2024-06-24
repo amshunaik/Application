@@ -1,18 +1,26 @@
 import React,{Fragment, useState,useContext} from 'react'
 import classes from './Header.module.css'
 
-import {NavLink,Link, useNavigate} from 'react-router-dom'
+import {NavLink,Link, useNavigate, json} from 'react-router-dom'
 import mealsImg from '../../asserts/meal1.jpg'
 import HeaderCart from './HeaderCart'
 import Cartcont from '../Store/cart-cont'
 const Header=(props)=>{
+  //const auth=localStorage.getItem("login");
+
     const navigate=useNavigate();
     //const {presslogout,setpresslogout}=useContext(Cartcont)
     //const [presslogout,setpresslogout]=useState(false);
     //const[data1,setdata1]=useState(localStorage.getItem('user'))
     const auth=localStorage.getItem('user');
     const auth1=localStorage.getItem('login');
-    //console.log("Auth : ",auth)
+    
+    const loginauht1=JSON.parse(auth1);
+    
+    
+    console.log(loginauht1)
+    
+    //const status=loginauht1.status;
     const onlogout=()=>{
       console.log("apple");
       localStorage.clear();
@@ -33,16 +41,23 @@ const Header=(props)=>{
                 
                 {auth1&&<ul className={classes.lok}>
                     <li><NavLink to="/" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Home</NavLink></li>
-                    <li><NavLink to="/hist" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Order History</NavLink></li>
+                    {auth1.status=="server"&&<li><NavLink to="/hist" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Order History</NavLink></li>}
                     <li><NavLink to="/signup" onClick={onlogout} className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Logout </NavLink></li>
-                    <li><h2 className={classes.hill}> Welcome <span className={classes.sp1}>{JSON.parse(auth1).name.charAt(0)}</span></h2></li>
+                    <li><h2 className={auth1.status === 'cust' ? classes.hill2 : classes.hill}
+                    > Welcome <span className={classes.sp1}>{JSON.parse(auth1).name.charAt(0)}</span></h2></li>
                     
                   
                   </ul>
                 }<ul className={classes.lok1}>
                     
                   {auth1==null&&<><li><NavLink to="/login" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Login</NavLink></li>
-                    <li><NavLink  to ="/signup" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Signup</NavLink></li></>}
+                    <li><NavLink  to ="/signup" className={({ isActive }) => (isActive ? classes.kop : classes.lop)}>Signup</NavLink></li>
+                    
+
+                    
+                    </>
+                    
+                    }
                   </ul> 
                   
                 
