@@ -1,7 +1,7 @@
 # Enhanced food application
 The purpose of the application is to provide consumers with a more enriched and individualized gastronomic experience. The application has three important features: Cart Management, Order History, and Dynamic Filters.
 
-Deployment link : https://www.linkedin.com/feed/update/urn:li:activity:7210687030849077248/
+Deployment link : https://66796f87a58cfabff3013858--cute-conkies-af983e.netlify.app/
 
 ![Screenshot 2023-12-02 143611](https://github.com/amshunaik/Enhanced_food_application/assets/103670494/82f005df-6ec3-4320-92ba-94d3d735c16f)
 
